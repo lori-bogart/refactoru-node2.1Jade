@@ -1,0 +1,60 @@
+extends layout
+
+block content
+	h1= title
+	p Welcome to #{title}
+	h2 Here is some new text.
+	a(href='http://fall2013.refactoru.com') Student Site
+
+	//This is my comment.
+	p.
+		Venison ground round sausage drumstick andouille. Pork turducken kevin, pork belly beef ribs andouille ham hock tenderloin ball tip filet mignon pork chop tail meatball short ribs.
+
+	ul#animals
+		li	pig
+		li	cow
+		li	bird
+		li	chicken
+
+	#content
+		.block
+			input#bar.foo1.foo2
+	#content
+		p.
+			Venison ground round sausage drumstick andouille.
+
+	div
+		address 53 Mt. Morris Ave
+		strong This is strong text.
+	h1(id="country") Welcome to the USA
+	button(class="btn", data-action="bea").
+		Colorado
+	h2#idONE This is some H2 text
+	button.btn Massachusetts
+	h2(id="idTWO") More h2 text
+	h2.cOne Try this.
+	p
+		|This is piped: Tri-tip tail spare ribs jowl ribeye ground round. Short loin fatback kielbasa pastrami strip steak sausage bacon cow, shank andouille pork loin turkey t-bone.
+		|More text after second pipe.
+
+	currency = "dollar"
+	h3=currency
+
+	currency2 = "countryName"
+	h1=currency2
+
+	if name == "Lori"
+		h2 Hi Lori
+	else
+		h2 My name is #{name}
+
+	mixin pilates(teacher, price)
+		li #{teacher} classes cost $ #{price}
+
+	ul#pilatesStudio
+		+pilates("The Pilates Center",23)
+		+pilates("Body Dynamics",15)
+
+
+
+
